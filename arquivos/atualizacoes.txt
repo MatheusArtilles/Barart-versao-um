@@ -1,0 +1,27 @@
+Dia 03/10/2022:
+Hoje foi finalizado o nosso header e os menus na versão mobile.
+Header ficou posicionado fixamente no topo enquanto o menu versão mobile no bottom do site.
+O menu Mobile aparece somente quando a tela chega até 1000px.
+*Todo o site será utilizado com bootstrap e javascript, além claro de HTML e CSS*.
+Ainda falta a sessão do carrossel que será feita com bootstrap pela praticidade e as seções de
+destaque da página.
+No menu mobile ainda será necessário implantar um modal para pesquisar quando o usuário clicar sobre
+a lupa de pesquisa, algo que será feito amanhã com javascript.
+----------------------------------------------------------------------------------------------------
+Dia 04/10/2022:
+Hoje foram adicionadas as seções de banner e os cards dos produtos mais vendidos
+o carrossel foi feito com bootstrap, possuindo dois carrossel-itens
+nos cards foram adicionadas imagens dos produtos com seus preços, a loja que está vendendo e os
+botões de ir para loja e comparar, as imagens de cada produto foi adicionada por meio do javascript
+no arquivo main.js, elas se encontram em variáveis que correspondem a: imagem_um, imagem_dois e 
+assim por diante.
+Essa parte das imagens poderá ser dinamizada futuramente.
+Amanhã serão implentadas novas seções da página home.
+-----------------------------------------------------------------------------------------------------
+Dia 05/10/2022:
+Hoje foi adicionado o botão de alerta co sino em cada card.
+Também foi adicionada a seção de menores preços, que foi utilizada com uma lista não ordenada
+mostrando ao usuário em formato de ranking de top 3 de cada categoria de produto.
+-----------------------------------------------------------------------------------------------------
+
+

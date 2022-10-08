@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap Css-->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+
+    <!--estilização do projeto-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/c600d5d8fe.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/Barart-2-removebg-preview.png" type="image/x-icon">
+    <title>Barart - Os melhores preços e Cupons</title>
+</head>
+<body>
+    <header><!--Início do header-->
+        <section>
+            <a href="index.html" class="area-logo">
+                <img src="img/Barart-2-removebg-preview.png" width="180px" height="180px" alt="">
+            </a>
+    
+            <div class="area-search">
+                <input type="search" placeholder="pesquisar">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="cupom">
+                    <a href="">
+                        <i class="fa-solid fa-tag"></i>
+                    </a>
+                </button>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="" class="sino">
+                        <i class="fa-solid fa-bell fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-regular fa-user fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-regular fa-heart fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button id="btn-mobile">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </button>
+        </section>
+
+        
+        <nav id="nav">
+            
+            <ul id="menu">
+                <button id="fecha" onclick="fechaMenu()">
+                    <i class="fa-solid fa-xmark fa-2x"></i>
+                </button>
+                
+                <li>
+                    <a href="#secao-2">
+                        Produtos mais vendidos
+                    </a>
+                </li>
+                <li>
+                    <a href="#secao-3">
+                        Menores Preços
+                    </a>
+                </li>
+                <li>
+                    <a href="#container">
+                        Mais baixos da semana
+                    </a>
+                </li>
+
+                <li class="li-mobile">
+                    <a href="">Login</a>
+                </li>
+                <li class="li-mobile">
+                    <a href="">Lista de desejos</a>
+                </li>
+            </ul>
+        </nav>
+    </header><!--Fim do header-->
+
+    <div class="area-botoes">
+        <nav>
+            <ul>
+                <li>
+                    <button>
+                        <a href="">
+                            <i class="fa-solid fa-bell fa-2x"></i>
+                        </a>
+                        
+                    </button>
+                </li>
+                <li>
+                    <button onclick="acao()" id="abre-modal">
+                        <i class="fa-solid fa-magnifying-glass fa-2x"></i> 
+                        
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-tag fa-2x"></i>
+                        
+                    </button>
+                    
+                </li>
+            </ul>
+        </nav>     
+    </div>
+
+    <div id="modal"><!--Início Modal-->
+        <button id="voltar" onclick="fecha()">
+            <i class="fa-solid fa-arrow-left-long fa-3x"></i>
+        </button>
+        <div id="cont-modal">
+            <input  id="input" type="text" placeholder="Pesquisar">
+            <button onclick="apagar()" id="area-fechar">
+                <i class="fa-solid fa-xmark fa-3x"></i>
+            </button>
+        </div>
+    </div><!--/Fim Modal-->
+
+    <section id="home" class="d-flex"><!--Início seção 1-->
+        <div class="container align-self-center"><!--container-->
+          <div class="row"><!--row -->
+            <div class="col-md-12 capa">
+  
+              <div id="carousel-banner" class="carousel slide" data-ride="carousel"><!--Carousel -->
+                <div class="carousel-inner"><!--Inner -->
+  
+                  <div class="carousel-item active">
+                    <img id="img-carrossel-1" src="img/Hero.png" alt="" width="" class="img-fluid">
+                    <div class="carousel-caption">
+                        <button class="botao-banner">
+                            <h4>Comprar</h4>
+                        </button>
+                    </div>
+                  </div>
+  
+                  <div class="carousel-item">
+                    <img id="img-carrossel-2" src="img/Hero_2.png" alt="" class="img-fluid">
+
+                    <div class="carousel-caption">
+                      <button class="botao-banner">
+                          <h4>Comprar</h4>
+                      </button>
+                    </div>
+                  </div>
+  
+  
+                </div><!--/Inner -->
+  
+                <!--Controles -->
+                <a href="#carousel-banner" class="carousel-control-prev" data-slide="prev">
+                  <i class="fas fa-angle-left fa-3x "></i>
+                </a>
+  
+                <a href="#carousel-banner" class="carousel-control-next" data-slide="next">
+                  <i class="fas fa-angle-right fa-3x "></i>
+                </a>
+              </div><!--/Carousel -->
+  
+            </div>
+          </div><!--row -->
+        </div><!--/container -->
+      </section><!--/FIM seção 1-->
+
+      <section id="secao-2">
+        <h3>Produtos mais vendidos</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="cartao" id="card-1">
+                        <button class="sinal-alerta">
+                            <i class="fa-solid fa-bell "></i>
+                        </button>
+                        <img id="img-1" class="img-fluid" width="275px" src="" alt="">
+                        <div class="texto">
+                            <h3>Alexa</h3>
+                            <h3>R$1900,00</h3>
+                            <img src="img/logo-magalu.png" width="150px" alt="">
+                            <div class="btns-cartao">
+                                <a href="">
+                                    Ir Para Loja
+                                </a>
+                                <button>
+                                    Comparar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="cartao" id="card-2">
+                        <button class="sinal-alerta">
+                            <i class="fa-solid fa-bell "></i>
+                        </button>
+                        <img id="img-2" class="img-fluid" width="275px" src="" alt="">
+                        <div class="texto">
+                            <h3>Iphone XR</h3>
+                            <h3>R$1900,00</h3>
+                            <img src="img/logo-magalu.png" width="150px" alt="">
+                            <div class="btns-cartao">
+                                <a href="">
+                                    Ir Para Loja
+                                </a>
+                                <button>
+                                    Comparar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="cartao" id="card-3">
+                        <button class="sinal-alerta">
+                            <i class="fa-solid fa-bell "></i>
+                        </button>
+                        <img id="img-3" class="img-fluid" width="275px" src="" alt="">
+                        <div class="texto">
+                            <h3>Notebook</h3>
+                            <h3>R$1900,00</h3>
+                            <img src="img/logo-magalu.png" width="150px" alt="">
+                            <div class="btns-cartao">
+                                <a href="">
+                                    Ir Para Loja
+                                </a>
+                                <button>
+                                    Comparar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="cartao" id="card-4">
+                        <button class="sinal-alerta">
+                            <i class="fa-solid fa-bell "></i>
+                        </button>
+                        <img id="img-4" class="img-fluid" width="275px" src="" alt="">
+                        <div class="texto">
+                            <h3>Microondas LG</h3>
+                            <h3>R$1900,00</h3>
+                            <img src="img/logo-magalu.png" width="150px" alt="">
+                            <div class="btns-cartao">
+                                <a href="">
+                                    Ir Para Loja
+                                </a>
+                                <button>
+                                    Comparar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="cartao" id="card-5">
+                        <button class="sinal-alerta">
+                            <i class="fa-solid fa-bell "></i>
+                        </button>
+                        <img id="img-5" class="img-fluid" width="275px" src="" alt="">
+                        <div class="texto">
+                            <h3>SmartTV Samsung</h3>
+                            <h3>R$1900,00</h3>
+                            <img src="img/logo-magalu.png" width="150px" alt="">
+                            <div class="btns-cartao">
+                                <a href="">
+                                    Ir Para Loja
+                                </a>
+                                <button>
+                                    Comparar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="cartao" id="card-6">
+                        <button class="sinal-alerta">
+                            <i class="fa-solid fa-bell "></i>
+                        </button>
+                        <img id="img-6" class="img-fluid" width="275px" src="" alt="">
+                        <div class="texto">
+                            <h3>Galaxy z-flip</h3>
+                            <h3>R$1900,00</h3>
+                            <img src="img/logo-magalu.png" width="150px" alt="">
+                            <div class="btns-cartao">
+                                <a href="">
+                                    Ir Para Loja
+                                </a>
+                                <button>
+                                    Comparar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="secao-3">
+        <h3>
+            Top 3 melhores preços
+            <i class="fa-solid fa-arrow-trend-down"></i>
+        </h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <ul>
+                        <h4>Limpeza</h4>
+                        <a href="">
+                            <li>
+                                <div class="poiscao primeiro">
+                                    <span>1</span>
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                <img src="img/lavadora.jpg"  alt="">
+                                <div class="descricao">
+                                    <p>
+                                      Lavadora Eletrolux 11KG
+
+                                    </p>
+                                </div>
+                                
+                            </li>
+                        </a>
+
+                        <a href="">
+                            <li>
+                                <div class="poiscao segundo">
+                                    <span>2</span>
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                <img src="img/tanquinho.jpg" alt="">
+                                <div class="descricao">
+                                    <p>
+                                      Tanquinho 25 Litros
+
+                                    </p>
+                                </div>
+                            </li>
+                        </a>
+
+                        <a href="">
+                            <li>
+                                <div class="poiscao terceiro">
+                                    <span>3</span>
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                <img src="img/lavadora-2.jpg" alt="">
+                                <div class="descricao">
+                                    <p>
+                                      Lavadora Consul 22KG
+                                    </p>
+                                </div> 
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="col-md-12 col-lg-4">
+                    <ul>
+                        <h4>Eletrônicos</h4>
+                        <a href="">
+                            <li>
+                                <div class="poiscao primeiro">
+                                    <span>1</span>
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                <img src="img/tablet.jpg" alt="">
+                                <div class="descricao">
+                                    <p>
+                                      Tablet Apple ipad 5
+                                    </p>
+                                </div> 
+                            </li>
+                        </a>
+
+                        <a href="">
+                            <li>
+                                <div class="poiscao segundo">
+                                    <span>2</span>
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                <img src="img/tablet-2.jpg" alt="">
+                                <div class="descricao">
+                                    <p>
+                                      Tablet Apple ipad 5 plus
+                                    </p>
+                                </div> 
+                            </li>
+                        </a>
+
+                        <a href="">
+                            <li>
+                                <div class="poiscao terceiro">
+                                    <span>3</span>
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                <img src="img/tablet-3.jpg" alt="">
+                                <div class="descricao">
+                                    <p>
+                                      Tablet ipad 4s plus
+                                    </p>
+                                </div> 
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="col-md-12 col-lg-4">
+                    <ul>
+                        <h4>Cozinha</h4>
+                        <a href="">
+                            <li>
+                                <div class="poiscao primeiro">
+                                    <span>1</span>
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                <img src="img/cafeteira.jpg" alt="">
+                                <div class="descricao">
+                                    <p>
+                                      Cafeteira elétrica 18 
+                                    </p>
+                                </div> 
+                            </li>
+                        </a>
+                        
+                        <a href="">
+                            <li>
+                                <div class="poiscao segundo">
+                                    <span>2</span>
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                <img src="img/cafeteira-2.jpg" alt="">
+                                <div class="descricao">
+                                    <p>
+                                      Cafeteira elétrica 38 
+                                    </p>
+                                </div> 
+                            </li>
+                        </a>
+
+                        <a href="">
+                            <li>
+                                <div class="poiscao terceiro">
+                                    <span>3</span>
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                <img src="img/cafeteira-3.jpg" alt="">
+                                <div class="descricao">
+                                    <p>
+                                        Cafeteira elétrica 48 
+                                    </p>
+                                </div> 
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <div id="container">
+        <h3>Mais baixos da semana</h3>
+        <button class="seta-left controle" aria-label="Previous image">
+            <i class="fas fa-angle-left fa-2x "></i>
+        </button>
+        <button class="seta-right controle" aria-label="Next Image">
+            <i class="fas fa-angle-right fa-2x "></i>
+        </button>
+        <div class="galleria-wrapper">
+            <div class="galleria">
+                <div class="cartao-galeria iten current-iten">
+                    <img src="img/alexa-removebg-preview.png" class="img-fluid" width="200px" alt="">
+                    <div class="text-cartao">
+                      <h4>Assistente Virtual Alexa</h4>
+                      
+                      <div class="preco">
+                        <p>Menor preço na Americanas</p>
+                        <h5>R$ 1.045,60</h5>
+                        <p>ou até 1x de R$1.000,00</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="cartao-galeria iten">
+                    <img src="img/iphone-removebg-preview.png" class="img-fluid" width="200px" alt="">
+                    <div class="text-cartao">
+                      <h4>Iphone XR</h4>
+                      <div class="preco">
+                        <p>Menor preço na Americanas</p>
+                        <h5>R$ 1.045,60</h5>
+                        <p>ou até 1x de R$1.000,00</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="cartao-galeria iten">
+                    <img src="img/microondas-removebg-preview.png" class="img-fluid" width="200px" alt="">
+                    <div class="text-cartao">
+                      <h4>Microondas Eletrolux 110vw</h4>
+                      <div class="preco">
+                        <p>Menor preço na Americanas</p>
+                        <h5>R$ 1.045,60</h5>
+                        <p>ou até 1x de R$1.000,00</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="cartao-galeria iten">
+                    <img src="img/notebook.jpg" class="img-fluid" width="200px" alt="">
+                    <div class="text-cartao">
+                      <h4>Notebook Samsung processador intel i5</h4>
+                      <div class="preco">
+                        <p>Menor preço na Americanas</p>
+                        <h5>R$ 1.045,60</h5>
+                        <p>ou até 1x de R$1.000,00</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="cartao-galeria iten">
+                    <img src="img/z-flip.jfif" class="img-fluid" width="200px" alt="">
+                    <div class="text-cartao">
+                      <h4>Samsung Galaxy z-flip</h4>
+                      <div class="preco">
+                        <p>Menor preço na Americanas</p>
+                        <h5>R$ 1.045,60</h5>
+                        <p>ou até 1x de R$1.000,00</p>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <nav>
+                        <h4>Destaques</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Celulares
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    TVs
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Notebooks
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Geladeiras
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Cupons de Desconto
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Entenda o Bararcoin
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <nav>
+                        <h4>Sobre a Barart</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Sua privacidade
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Trabalhe com a gente
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Imprensa
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Ética e Integridade
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <nav>
+                        <h4>Marcas e lojas</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Anunciar minha loja
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Divulgar preço de outra Loja
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
