@@ -1,0 +1,262 @@
+#sec-1 {
+    margin-top: 75px;
+    width: 100vw;
+    padding: 25px;
+
+}
+.preco-ant {
+    text-decoration: line-through;
+    color: rgb(136, 134, 134);
+    font-size: 1.1em;
+}
+.preco-pos {
+    color: green;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+#sec-1 h2{
+    font-size: 2em;
+}
+button.grafico {
+    position: fixed;
+    top: 300px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    color: #12224e;
+    background-color: #fff;
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
+    font-size: 1.3rem;
+    z-index: 2;
+}
+#area.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.info-prom {
+    width: 250px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 12px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+#area-btns button {
+    width: 75px;
+    outline: none;
+    border: 1px solid #12224e;
+    color: #12224e;
+    background: none;
+    margin-left: 20px;
+    cursor: pointer;
+    height: 75px;
+    border-radius: 20px;
+    transition: all .6s ease-in-out;
+}
+#area-btns button:hover {
+    background-color: #12224e;
+    color: #fff;
+}
+#compra{
+    /*margin-bottom: 100px;*/
+    margin-top: -20px;
+    border: 1px solid #12224e;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 200px;
+    color: #12224e;
+    transition: all .6s ease-in-out;
+}
+#compra:hover{
+    background-color: #12224e;
+    color: #fff;
+}
+.area-escolhas {
+    margin-bottom: 100px;
+    margin-top: 30px;
+    padding: 10px;
+}
+.area-imagem{
+    margin-bottom: 10px;
+    position: relative;
+}
+.area-imagem button {
+    position: absolute;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    top: 0;
+    right: 30px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #12224e;
+    transition: all .6s ease-in-out;
+}
+.area-imagem button:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: red;
+}
+#area-dois {
+    margin: 15px;
+    padding: 25px;
+}
+#area-dois p {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: rgb(92, 92, 92);
+}
+#sobre-air {
+    text-align: center;
+}
+#sec-2 {
+    width: 100vw;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: center;
+    color: #12224e;
+}
+#sec-2 .loja {
+    width: 100%;
+    margin-top: 25px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#sec-2 .loja .valor {
+    margin-top: 20px;
+    font-weight: 700;
+}
+#sec-2 .loja .valor .info-promo{
+    color: rgb(1, 189, 1);
+    margin-top: 18px;
+}
+#sec-2 .loja .descricao-produt {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#sec-2 .loja .descricao-produt .marca{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sec-2 .loja .descricao-produt .marca button {
+    width: 300px;
+    height: 70px;
+    outline: none;
+    border: none;
+    background-color: #12224e;
+    cursor: pointer;
+    border-radius: 20px;
+    
+}
+#sec-2 .loja .descricao-produt .marca button a {
+    color: #fff;
+    display: block;
+    height: 100%;
+    padding-top: 20px;
+}
+#container {
+    padding: 15px;
+    max-width: 80%;
+    color: #12224e;
+    margin: 0 auto;
+    text-align: center;
+}
+#container .galleria-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+#container .galleria-wrapper .galleria {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+.seta-left, .seta-right {
+    margin-top: 20px;
+    margin: 15px;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 100%;
+    border: none;
+    background-color: #ff0f0f;
+    color: aliceblue;
+}
+
+#container .galleria-wrapper .galleria .iten {
+    flex-shrink: 0;
+    opacity:0.6;
+    transition: all 600ms ease-in-out;
+}
+#container .galleria-wrapper .galleria .cartao-galeria {
+    border-radius: 20px;
+    background-color: #fff;
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-around;
+    transition: all .6s ease-in-out;
+    
+}
+#container .galleria-wrapper .galleria .cartao-galeria:hover {
+    opacity: 1;
+}
+#container .galleria-wrapper .galleria .cartao-galeria .text-cartao {
+    width: 100%;
+    display: flex;
+    font-weight: 700;
+    flex-direction: column;
+    text-align: center;
+    color: #12224e;
+    align-items: center;
+}
+#container .galleria-wrapper .galleria .current-iten {
+    opacity: 1;
+}
+#container .galleria-wrapper::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+#container .galleria-wrapper {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+@media (max-width: 1000px) {
+    #sec-1 {
+        margin-top: 150px;
+    }
+    #sec-2 .loja {
+        flex-direction: column;
+    }
+    #sec-2 .loja .descricao-produt .marca {
+        flex-direction: column;
+    }
+}

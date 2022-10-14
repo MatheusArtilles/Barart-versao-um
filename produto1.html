@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap Css-->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+
+    <!--estilização do projeto-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/produto.css">
+    
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/c600d5d8fe.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/Barart-2-removebg-preview.png" type="image/x-icon">
+    <title>Barart | Assistente virtual Alexa</title>
+</head>
+<body>
+    <header><!--Início do header-->
+        <section>
+            <a href="index.html" class="area-logo">
+                <img src="img/Barart-2-removebg-preview.png" width="180px" height="180px" alt="">
+            </a>
+    
+            <div class="area-search">
+                <input type="search" placeholder="pesquisar">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="cupom">
+                    <a href="">
+                        <i class="fa-solid fa-tag"></i>
+                    </a>
+                </button>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="" class="sino">
+                        <i class="fa-solid fa-bell fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-regular fa-user fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-regular fa-heart fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button id="btn-mobile">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </button>
+        </section>
+
+        
+        <nav id="nav">
+            
+            <ul id="menu">
+                <button id="fecha" onclick="fechaMenu()">
+                    <i class="fa-solid fa-xmark fa-2x"></i>
+                </button>
+                
+                <li>
+                    <a href="#secao-2">
+                        Produtos mais vendidos
+                    </a>
+                </li>
+                <li>
+                    <a href="#secao-3">
+                        Menores Preços
+                    </a>
+                </li>
+                <li>
+                    <a href="#container">
+                        Mais baixos da semana
+                    </a>
+                </li>
+
+                <li class="li-mobile">
+                    <a href="">Login</a>
+                </li>
+                <li class="li-mobile">
+                    <a href="">Lista de desejos</a>
+                </li>
+            </ul>
+        </nav>
+    </header><!--Fim do header-->
+
+    <div class="area-botoes">
+        <nav>
+            <ul>
+                <li>
+                    <button>
+                        <a href="">
+                            <i class="fa-solid fa-bell fa-2x"></i>
+                        </a>
+                        
+                    </button>
+                </li>
+                <li>
+                    <button onclick="acao()" id="abre-modal">
+                        <i class="fa-solid fa-magnifying-glass fa-2x"></i> 
+                        
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-tag fa-2x"></i>
+                        
+                    </button>
+                    
+                </li>
+            </ul>
+        </nav>     
+    </div>
+
+    <button class="grafico">
+        <i class="fa-solid fa-chart-line"></i>
+    </button>
+
+    <div id="modal"><!--Início Modal-->
+        <button id="voltar" onclick="fecha()">
+            <i class="fa-solid fa-arrow-left-long fa-3x"></i>
+        </button>
+        <div id="cont-modal">
+            <input  id="input" type="text" placeholder="Pesquisar">
+            <button onclick="apagar()" id="area-fechar">
+                <i class="fa-solid fa-xmark fa-3x"></i>
+            </button>
+        </div>
+    </div><!--/Fim Modal-->
+
+    <section id="sec-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                  <div>
+                    <h2>Assistente virtual Alexa</h2>
+                    <p class="preco-ant">de R$ 3.450,00</p>
+                    <p class="preco-pos">por R$ 1.900,90</p>
+
+                    <div class="info-prom">
+                        <p>
+                            Menor preço na semana
+                        </p>
+                    </div>
+                    <div id="area-btns">
+                        <a href="" class="btn btn-custom" id="compra">ir para loja</a>
+                        <button>
+                            <i class="fa-solid fa-bell fa-2x"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="area-escolhas">
+                        <input onclick="escolhe('imagem', 'img/alexa-removebg-preview.png')" type="image" src="img/alexa-removebg-preview.png" width="80px">
+                        <input onclick="escolhe('imagem', 'img2/alexa-2-removebg-preview.png')"  type="image" src="img2/alexa-2-removebg-preview.png" width="60px">
+                       
+                    </div>
+                    
+                  </div>  
+                </div>
+                <div class="col-md-6">
+                    <div class="area-imagem">
+                        <img width="480px" id="imagem" src="img/alexa-removebg-preview.png"  alt="" class="img-fluid">
+                        <button>
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec-2">
+        <h3>Oferta em outas lojas</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="loja">
+                       <img src="img/alexa-removebg-preview.png" class="img-fluid" width="200px" class="img-fluid" alt="">
+                       <div class="valor">
+                            <h4>
+                                R$ 1.500,00
+                            </h4>
+                            <p>ou  12x de R$105,00</p>
+                            <p class="info-promo">
+                                frete grátis
+                                <i class="fa-solid fa-truck"></i>
+                            </p>
+                       </div>
+                       <div class="descricao-produt">
+                            
+
+                            <div class="marca">    
+                                <img src="img/logo-magalu.png" height="70px" width="110px" alt="">
+                                <button>
+                                    <a href="">
+                                        Ir para loja
+                                    </a>
+                                </button>
+                            </div>
+                       </div> 
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="loja">
+                        <img src="img/alexa-removebg-preview.png" class="img-fluid" width="200px" class="img-fluid" alt="">
+                        <div class="valor">
+                             <h4>
+                                 R$ 1.500,00
+                             </h4>
+                             <p>ou  12x de R$105,00</p>
+                             <p class="info-promo">
+                                frete grátis
+                                <i class="fa-solid fa-truck"></i>
+                             </p>
+                        </div>
+                        <div class="descricao-produt">
+                             
+ 
+                             <div class="marca">    
+                                 <img src="img/logo-magalu.png" height="70px" width="110px" alt="">
+                                 <button>
+                                     <a href="">
+                                         Ir para loja
+                                     </a>
+                                 </button>
+                             </div>
+                        </div> 
+                     </div>
+                </div>
+                <div class="col-12">
+                    <div class="loja">
+                        <img src="img/alexa-removebg-preview.png" class="img-fluid" width="200px" class="img-fluid" alt="">
+                        <div class="valor">
+                             <h4>
+                                 R$ 1.500,00
+                             </h4>
+                             <p>ou  12x de R$105,00</p>
+                             <p class="info-promo">
+                                frete grátis
+                                <i class="fa-solid fa-truck"></i>
+                            </p>
+                        </div>
+                        <div class="descricao-produt">
+                             
+ 
+                             <div class="marca">    
+                                 <img src="img/logo-magalu.png" height="70px" width="110px" alt="">
+                                 <button>
+                                     <a href="">
+                                         Ir para loja
+                                     </a>
+                                 </button>
+                             </div>
+                        </div> 
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="container">
+        <h3>Produtos relacionados</h3>
+        <button class="seta-left controle" aria-label="Previous image">
+            <i class="fas fa-angle-left fa-2x "></i>
+        </button>
+        <button class="seta-right controle" aria-label="Next Image">
+            <i class="fas fa-angle-right fa-2x "></i>
+        </button>
+        <div class="galleria-wrapper">
+            <div class="galleria">
+                <div class="cartao-galeria iten current-iten">
+                    <img src="img/alexa-removebg-preview.png" class="img-fluid" width="200px" alt="">
+                    <div class="text-cartao">
+                      <h4>Assistente Virtual Alexa</h4>
+                      
+                      <div class="preco">
+                        <p>Menor preço na Americanas</p>
+                        <h5>R$ 1.045,60</h5>
+                        <p>ou até 1x de R$1.000,00</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="cartao-galeria iten">
+                    <img src="img/iphone-removebg-preview.png" class="img-fluid" width="200px" alt="">
+                    <div class="text-cartao">
+                      <h4>Iphone XR</h4>
+                      <div class="preco">
+                        <p>Menor preço na Americanas</p>
+                        <h5>R$ 1.045,60</h5>
+                        <p>ou até 1x de R$1.000,00</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="cartao-galeria iten">
+                    <img src="img/microondas-removebg-preview.png" class="img-fluid" width="200px" alt="">
+                    <div class="text-cartao">
+                      <h4>Microondas Eletrolux 110vw</h4>
+                      <div class="preco">
+                        <p>Menor preço na Americanas</p>
+                        <h5>R$ 1.045,60</h5>
+                        <p>ou até 1x de R$1.000,00</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="cartao-galeria iten">
+                    <img src="img/notebook.jpg" class="img-fluid" width="200px" alt="">
+                    <div class="text-cartao">
+                      <h4>Notebook Samsung processador intel i5</h4>
+                      <div class="preco">
+                        <p>Menor preço na Americanas</p>
+                        <h5>R$ 1.045,60</h5>
+                        <p>ou até 1x de R$1.000,00</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="cartao-galeria iten">
+                    <img src="img/z-flip.jfif" class="img-fluid" width="200px" alt="">
+                    <div class="text-cartao">
+                      <h4>Samsung Galaxy z-flip</h4>
+                      <div class="preco">
+                        <p>Menor preço na Americanas</p>
+                        <h5>R$ 1.045,60</h5>
+                        <p>ou até 1x de R$1.000,00</p>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <nav>
+                        <h4>Destaques</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Celulares
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    TVs
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Notebooks
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Geladeiras
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Cupons de Desconto
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Entenda o Bararcoin
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <nav>
+                        <h4>Sobre a Barart</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Sua privacidade
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Trabalhe com a gente
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Imprensa
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Ética e Integridade
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <nav>
+                        <h4>Marcas e lojas</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Anunciar minha loja
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Divulgar preço de outra Loja
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/produto.js"></script>
+    <script src="js/slide.js"></script>
+</body>
+</html>
