@@ -190,6 +190,56 @@ footer nav ul li a:hover {
     text-decoration: none;
     color: #ff0f0f;
 }
+.modal .modal-content {
+    border-radius: 20px;
+}
+.modal .modal-content .modal-header {
+    border-bottom: none;
+}
+.modal .modal-content .modal-header button {
+    outline: none;
+    font-size: 2.8rem;
+}
+.modal .modal-content .modal-body .conteudo-modal{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.modal .modal-content .modal-body .conteudo-modal .preco-alerta {
+    width: 80%;
+    font-weight: 600;
+    color: rgb(134, 131, 131);
+}
+.modal .modal-content .modal-body .conteudo-modal .preco-alerta span {
+    color: #12224e;
+    font-size: 1.5rem;
+}
+.modal .modal-content .modal-body .conteudo-modal .preco-alerta h4 {
+    color: #ff0f0f;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.modal .modal-content .modal-footer {
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal .modal-content .modal-footer .botao-modal {
+    width: 200px;
+    padding: 6px;
+    outline: none;
+    border: none;
+    background-color: #ff0f0f;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+.modal .modal-content .modal-footer .botao-modal:hover {
+    background-color: #12224e;
+}
 @keyframes swing {
     15% {
     transform: translateX(5px) rotate(5deg);

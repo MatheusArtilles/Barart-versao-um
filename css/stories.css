@@ -1,23 +1,35 @@
 #stories {
     width: 100vw;
+    
 }
 #stories h4 {
     text-align: center;
     font-weight: 600;
     color: #12224e;
-    margin-top: 20px;
+    margin-top: 40px;
 }
+
 .slide .slide-items .img {
     max-width: 100%;
     display: block;
     height: 450px;
+    
+}
+.slide .slide-items .img .descript-story {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 0px;
+    color: #fff;
+    padding: 10px;
 }
 #stories .ficha {
     max-width: 90%;
     padding: 10px;
     border-radius: 20px;
-    margin: 10px;
-    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-left: 10px;
+    /*margin: 10px;
+    margin-bottom: 20px;*/
     background-color: #fff;
     box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
 }

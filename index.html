@@ -187,11 +187,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <div class="cartao" id="card-1" onclick="window.location.assign('produto1.html')">
-                        <a href="" class="sinal-alerta">
+                    <div class="cartao" id="card-1" >
+                        <a href="" class="sinal-alerta" data-toggle="modal" data-target="#modalExemplo">
                             <i class="fa-solid fa-bell"></i>
                         </a>
-                        <img class="img-fluid" width="275px" src="img/alexa-removebg-preview.png" alt="">
+                        <img onclick="window.location.assign('produto1.html')" class="img-fluid" width="275px" src="img/alexa-removebg-preview.png" alt="">
                         <div class="texto">
                             <h3>Alexa</h3>
                             <h3>R$1900,00</h3>
@@ -209,11 +209,11 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="cartao" id="card-2" onclick="window.location.assign('produto2.html')">
-                        <a href="" class="sinal-alerta">
+                    <div class="cartao" id="card-2" >
+                        <a href="" class="sinal-alerta" data-toggle="modal" data-target="#modalExemplo">
                             <i class="fa-solid fa-bell "></i>
                         </a>
-                        <img  class="img-fluid" width="275px" src="img/iphone-removebg-preview.png" alt="">
+                        <img  class="img-fluid" onclick="window.location.assign('produto2.html')" width="275px" src="img/iphone-removebg-preview.png" alt="">
                         <div class="texto">
                             <h3>Iphone XR</h3>
                             <h3>R$1900,00</h3>
@@ -231,11 +231,11 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="cartao" id="card-3" onclick="window.location.assign('produto3.html')">
-                        <a href="" class="sinal-alerta">
+                    <div class="cartao" id="card-3" >
+                        <a href="" class="sinal-alerta" data-toggle="modal" data-target="#modalExemplo">
                             <i class="fa-solid fa-bell "></i>
                         </a>
-                        <img  class="img-fluid" width="275px" src="img/notebook.jpg" alt="">
+                        <img  class="img-fluid" onclick="window.location.assign('produto3.html')" width="275px" src="img/notebook.jpg" alt="">
                         <div class="texto">
                             <h3>Notebook</h3>
                             <h3>R$1900,00</h3>
@@ -253,11 +253,11 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="cartao" id="card-4" onclick="window.location.assign('produto4.html')">
-                        <a href="" class="sinal-alerta">
+                    <div class="cartao" id="card-4" >
+                        <a href="" class="sinal-alerta" data-toggle="modal" data-target="#modalExemplo">
                             <i class="fa-solid fa-bell "></i>
                         </a>
-                        <img  class="img-fluid" width="275px" src="img/microondas-removebg-preview.png" alt="">
+                        <img  class="img-fluid" onclick="window.location.assign('produto4.html')" width="275px" src="img/microondas-removebg-preview.png" alt="">
                         <div class="texto">
                             <h3>Microondas LG</h3>
                             <h3>R$1900,00</h3>
@@ -275,11 +275,11 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="cartao" id="card-5" onclick="window.location.assign('produto5.html')">
-                        <a href="" class="sinal-alerta">
+                    <div class="cartao" id="card-5">
+                        <a href="" class="sinal-alerta" data-toggle="modal" data-target="#modalExemplo">
                             <i class="fa-solid fa-bell "></i>
                         </a>
-                        <img  class="img-fluid" width="275px" src="img/smart.png" alt="">
+                        <img  class="img-fluid" onclick="window.location.assign('produto5.html')" width="275px" src="img/smart.png" alt="">
                         <div class="texto">
                             <h3>SmartTV Samsung</h3>
                             <h3>R$1900,00</h3>
@@ -297,11 +297,11 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="cartao" id="card-6" onclick="window.location.assign('produto6.html')">
-                        <a href="" class="sinal-alerta">
+                    <div class="cartao" id="card-6" >
+                        <a href="" class="sinal-alerta" data-toggle="modal" data-target="#modalExemplo">
                             <i class="fa-solid fa-bell "></i>
                         </a>
-                        <img  class="img-fluid" width="275px" src="img/z-flip.jfif" alt="">
+                        <img  class="img-fluid" onclick="window.location.assign('produto6.html')" width="275px" src="img/z-flip.jfif" alt="">
                         <div class="texto">
                             <h3>Galaxy z-flip</h3>
                             <h3>R$1900,00</h3>
@@ -320,6 +320,36 @@
             </div>
         </div>
       </section>
+
+      <!-- Modal -->
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="conteudo-modal">
+                    <img width="300px" class="img-fluid" src="img/iphone-removebg-preview.png" alt="">
+                    <div class="preco-alerta">
+                        <span>Valor atual:</span>
+                        <h4>R$1.500,00</h4>
+                        <p>
+                            Quando este produto atingir um valor menor que o atual você será alertado
+                            em nosso sistema e em seus principais pontos de contato.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            
+            <button type="button" class="botao-modal">Criar alerta <i class="fa-solid fa-bell"></i></button>
+            </div>
+        </div>
+        </div>
+    </div>
 
       <section id="secao-3">
         <h3>
