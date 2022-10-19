@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(90.1deg, #1B3270 22.39%, #262DC5 54.15%, #006BFD 77.47%, #25C7FA 91.46%, #00FFE0 99.92%);
+    background-size: cover;
+    overflow-x: hidden;
+    font-family: 'Ubuntu', sans-serif;
+}
+html {
+    overflow-x: hidden;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+header {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-left: 10px;
+}
+header #nav {
+    width: 40%;
+}
+header #nav #menu {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header #nav #menu li a {
+    color: #fff;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.06rem;
+    transition: all .6s ease-in-out;
+}
+header #nav #menu li a:hover {
+    background-color: red;
+    transform: translateX(-4px);
+    -webkit-box-shadow: 5px 5px 1px 4px #000000; 
+    box-shadow: 5px 5px 1px 4px #000000;
+    
+    
+}
+#nav #fecha{
+    display: none;
+}
+header #btn-mobile {
+    display: none;
+}
+main {
+    margin-top: 20px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+main .form {
+    display: flex;
+    /*width: 640px;*/
+    width: 50%;
+    height: 534px;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+main .form .img {
+    position: absolute;
+    top: -80px;
+    right: 60%;  
+}
+main .form h2 {
+    margin-top: 80px;
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #fff;
+    
+}
+main .form .formulario {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+main .form .formulario input,button {
+    margin-top: 20px;
+    width: 70%;
+    padding: 12px;
+    border-radius: 20px;
+    outline: none;
+    background: none;
+}
+main .form .formulario input {
+    border: none;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+}
+main .form .formulario button {
+    background-color: #12224e;
+    border: none;
+    color: #fff;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+    font-weight: 600;
+}
+main .form .formulario button:hover {
+    background-color: red;
+}
+main .form .login-social {
+    width: 50%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main .form .login-social button {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #1B3270;
+    transition: all .6s ease-in-out;
+}
+main .form .login-social button:hover {
+    box-shadow: 6px 6px 6px #000;
+    transform: translate(-2px);
+}
+main .form a {
+    color: red;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.social {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 4px;
+    bottom: 200px;
+    z-index: 2;
+}
+.social button{
+    width: 50px;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    border: none;
+    height: 50px;
+    transition: all .6s ease-in-out;
+}
+.social button:hover {
+    box-shadow: 6px 6px 6px #000;
+    transform: translate(-2px);
+}
+@media (max-width: 850px) {
+    header .area-mobile {
+        width: 100%;
+        margin-left: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+    header #btn-mobile {
+        display: block;
+        background-color: none;
+        outline: none
+    }
+    header #nav {
+        position: relative;
+        display: block;
+    }
+    header #nav #menu {
+        display: block;
+        position: fixed;
+        width: 0px;
+        top: 0px;
+        left: 0px;
+        background: #12224e;
+        box-shadow: 1px 1px 5px #000;
+        height: 100vh;
+        transition: .5s;
+        z-index: 2000;
+        visibility: hidden;
+        overflow-y: hidden;
+
+    }
+    header #nav.active #fecha {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 50px;
+        border: none;
+        margin-top: 10px;
+        color: #fff;
+        outline: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    header #nav.active #fecha:hover{
+        color: rgb(246, 65, 65);
+        transition: all .6s;
+    }
+    header #nav.active #menu {
+        width: 60%;
+        height: 100vh;
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 0px 20px 20px 0px;
+        visibility: visible;
+        overflow-y: auto;
+        justify-content: flex-start;
+    }
+    header #nav #menu li {
+        margin-top: 30px;
+    }
+    header #nav #menu li a {
+        font-size: 1.2rem;
+        opacity: 0;
+        margin: 0 1em;
+        transition: all .6s ease-in-out; 
+    }
+    
+    header #nav.active #menu li a {
+        opacity: 1;
+        transition: all .6s ease-in-out;
+    }
+
+    header #btn-mobile {
+        padding: .5em 1em;
+        border: none;
+        outline: none;
+        background: none;
+        color: #fff;
+        cursor: pointer;
+    }
+    main {
+        margin-top: 50px;
+    }
+    main .form {
+        width: 90%;
+    }
+    
+    main .form .img {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media(max-width: 400px) {
+    main .form .img {
+        display: none;
+    }
+}
