@@ -1,0 +1,89 @@
+.area-principal {
+    margin-top: 100px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    width: 100vw;
+}
+.area-principal h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #12224e;
+}
+.area-principal .container {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding-bottom: 30px;
+}
+.produto-add {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    justify-content: space-around;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.texto {
+    display: flex;
+    margin-top: 20px;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.texto .preco-atual {
+    color: rgb(4, 186, 4);
+}
+.texto h3 {
+    color: #1B3270;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+.texto .btns-cartao {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.texto .btns-cartao a {
+    width: 40%;
+    height: 40px;
+    background-color: #12224e;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto .btns-cartao .compara {
+    width: 40%;
+    height: 40px;
+    border-radius: 30px;
+    outline: none;
+    background-color: #ff0f0f;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+}
+.texto .btns-cartao a:hover {
+    text-decoration: none;
+}
+@media (max-width: 1000px) {
+    .produto-add {
+        flex-direction: column;
+        align-items: center;
+    }
+    .texto {
+        width: 100%;
+    }
+    
+}

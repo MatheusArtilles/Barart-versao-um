@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap Css-->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+
+    <!--Estilo do projeto-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/alerta.css">
+    <!--Fontawesome e icone-->
+    <script src="https://kit.fontawesome.com/c600d5d8fe.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/Barart-2-removebg-preview.png" type="image/x-icon">
+
+    
+    <title>Alertas de preço</title>
+</head>
+<body>
+    <header><!--Início do header-->
+        <section>
+            <a href="index.html" class="area-logo">
+                <img src="img/Barart-2-removebg-preview.png" width="180px" height="180px" alt="">
+            </a>
+    
+            <div class="area-search">
+                <input type="search" placeholder="pesquisar">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="cupom">
+                    <a href="">
+                        <i class="fa-solid fa-tag"></i>
+                    </a>
+                </button>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="alerta.html" class="sino">
+                        <i class="fa-solid fa-bell fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa-regular fa-user fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-regular fa-heart fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button id="btn-mobile">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </button>
+        </section>
+
+        
+        <nav id="nav">
+            
+            <ul id="menu">
+                <button id="fecha" onclick="fechaMenu()">
+                    <i class="fa-solid fa-xmark fa-2x"></i>
+                </button>
+                
+                <li>
+                    <a href="#secao-2">
+                        Produtos mais vendidos
+                    </a>
+                </li>
+                <li>
+                    <a href="#secao-3">
+                        Menores Preços
+                    </a>
+                </li>
+                <li>
+                    <a href="#container">
+                        Mais baixos da semana
+                    </a>
+                </li>
+
+                <li class="li-mobile">
+                    <a href="login.html">Login</a>
+                </li>
+                <li class="li-mobile">
+                    <a href="">Lista de desejos</a>
+                </li>
+            </ul>
+        </nav>
+    </header><!--Fim do header-->
+
+    <div class="area-botoes">
+        <nav>
+            <ul>
+                <li>
+                    <button>
+                        <a href="">
+                            <i class="fa-solid fa-bell fa-2x"></i>
+                        </a>
+                        
+                    </button>
+                </li>
+                <li>
+                    <button onclick="acao()" id="abre-modal">
+                        <i class="fa-solid fa-magnifying-glass fa-2x"></i> 
+                        
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-tag fa-2x"></i>
+                        
+                    </button>
+                    
+                </li>
+            </ul>
+        </nav>     
+    </div>
+
+    <div id="modal"><!--Início Modal-->
+        <button id="voltar" onclick="fecha()">
+            <i class="fa-solid fa-arrow-left-long fa-3x"></i>
+        </button>
+        <div id="cont-modal">
+            <input  id="input" type="text" placeholder="Pesquisar">
+            <button onclick="apagar()" id="area-fechar">
+                <i class="fa-solid fa-xmark fa-3x"></i>
+            </button>
+        </div>
+    </div><!--/Fim Modal-->
+
+    <section class="area-principal">
+        <h2>
+            Seus Alertas
+            <i class="fa-solid fa-bell"></i>
+        </h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 posicao-um">
+                    <div class="produto-add">
+                        <img src="img/alexa-removebg-preview.png" width="275px" class="img-fluid" alt="">
+                        <div class="texto">
+                            <h3>Alexa</h3>
+                            <h3 class="preco-atual">R$1900,00</h3>
+                            <img src="img/logo-magalu.png" width="100px" alt="">
+                            <div class="btns-cartao">
+                                <a href="">
+                                    Ir Para Loja
+                                </a>
+                                <a class="compara" href="produto2.html">
+                                    Comparar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 posicao-dois">
+                    <div class="produto-add">
+                        <img src="img/iphone-removebg-preview.png" width="275px" class="img-fluid" alt="">
+                        <div class="texto">
+                            <h3>Iphone XR</h3>
+                            <h3 class="preco-atual">R$1900,00</h3>
+                            <img src="img/logo-magalu.png" width="100px" alt="">
+                            <div class="btns-cartao">
+                                <a href="">
+                                    Ir Para Loja
+                                </a>
+                                <a class="compara" href="">
+                                    Comparar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 posicao-tres">
+                    <div class="produto-add">
+                        <img src="img/notebook.jpg" width="275px" class="img-fluid" alt="">
+                        <div class="texto">
+                            <h3>Notebook</h3>
+                            <h3 class="preco-atual">R$1900,00</h3>
+                            <img src="img/logo-magalu.png" width="100px" alt="">
+                            <div class="btns-cartao">
+                                <a href="">
+                                    Ir Para Loja
+                                </a>
+                                <a class="compara" href="">
+                                    Comparar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 posicao-quatro">
+                    <div class="produto-add">
+                        <img src="img/microondas-removebg-preview.png" width="275px" class="img-fluid" alt="">
+                        <div class="texto">
+                            <h3>Microondas LG</h3>
+                            <h3 class="preco-atual">R$1900,00</h3>
+                            <img src="img/logo-magalu.png" width="100px" alt="">
+                            <div class="btns-cartao">
+                                <a href="">
+                                    Ir Para Loja
+                                </a>
+                                <a class="compara" href="">
+                                    Comparar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <nav>
+                        <h4>Destaques</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Celulares
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    TVs
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Notebooks
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Geladeiras
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Cupons de Desconto
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Entenda o Bararcoin
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <nav>
+                        <h4>Sobre a Barart</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Sua privacidade
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Trabalhe com a gente
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Imprensa
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Ética e Integridade
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <nav>
+                        <h4>Marcas e lojas</h4>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Anunciar minha loja
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    Divulgar preço de outra Loja
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
